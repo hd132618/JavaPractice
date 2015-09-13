@@ -12,8 +12,14 @@ public class SmartPhoneTest {
 			System.out.println(phone);
 			phone.turnOn();
 			phone.pay();
-			
-			// IPhone 또는 Galaxy폰 기능 사용하기
+			if(phone instanceof IPhone) {
+				IPhone a = (IPhone)phone;
+				a.useAirDrop();
+			}
+			if(phone instanceof Galaxy) {
+				Galaxy a = (Galaxy)phone;
+				a.useWirelessCharging();
+			}
 			phone.useSpecialFunction(phone);
 			
 			phone.turnOff();
